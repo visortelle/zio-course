@@ -1,7 +1,5 @@
 package com.rockthejvm.part1recap
 
-import org.graalvm.compiler.core.common.LIRKind
-
 object ContextualAbstractionsScala3 {
   // given/using combo
   def increment(x: Int)(using amount: Int): Int = x + amount
