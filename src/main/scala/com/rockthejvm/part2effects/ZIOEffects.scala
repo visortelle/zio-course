@@ -133,7 +133,7 @@ object ZIOEffects {
 
     given trace: Trace = Trace.empty
 
-    val run = Unsafe.unsafe { () => {
+    val run = Unsafe.unsafe { implicit unsafe => {
 //      runtime.unsafe.run(endlessLoop)
       runtime.unsafe.run({
         for {
@@ -147,6 +147,6 @@ object ZIOEffects {
     }
     }
 
-    run()
+    run
   }
 }
